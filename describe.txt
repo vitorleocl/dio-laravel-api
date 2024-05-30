@@ -1,0 +1,62 @@
+### Descrição
+
+Este guia fornecerá um passo a passo detalhado para criar uma API do zero utilizando PHP com o framework Laravel. A API resultante será capaz de lidar com solicitações HTTP, fornecendo e consumindo dados no formato JSON.
+
+### Pré-requisitos
+
+Antes de começar, assegure-se de ter instalado:
+
+- **PHP**: Versão 7.4 ou superior
+- **Composer**: Gerenciador de dependências do PHP
+- **Laravel CLI**: Instalado globalmente para criar novos projetos Laravel
+
+### Passo 1: Criar um novo projeto Laravel
+
+Execute o seguinte comando para criar um novo projeto Laravel:
+
+```bash
+laravel new nome-do-projeto
+```
+
+Isso criará um novo diretório com a estrutura inicial do projeto Laravel.
+
+### Passo 2: Configurar o ambiente de desenvolvimento
+
+Navegue até o diretório do projeto e configure seu ambiente de desenvolvimento no arquivo `.env`. Certifique-se de configurar as informações de banco de dados, se necessário.
+
+### Passo 3: Criar modelos e migrações
+
+Crie os modelos necessários para representar os dados da sua aplicação e suas respectivas migrações para criar as tabelas correspondentes no banco de dados:
+
+```bash
+php artisan make:model NomeDoModelo -m
+```
+
+Isso criará o modelo e a migração associada.
+
+### Passo 4: Definir as rotas da API
+
+Defina as rotas da sua API no arquivo `routes/api.php`. Você pode usar o método `Route::apiResource()` para criar rotas CRUD para seus recursos.
+
+### Passo 5: Criar controladores
+
+Crie os controladores para manipular as requisições HTTP. Você pode usar o comando `make:controller` do Artisan para isso:
+
+```bash
+php artisan make:controller NomeDoController
+```
+
+### Passo 6: Implementar lógica de negócios nos controladores
+
+Nos controladores recém-criados, implemente a lógica necessária para lidar com as solicitações HTTP, como criação, leitura, atualização e exclusão de recursos.
+
+### Passo 7: Testar a API
+
+Utilize ferramentas como Postman ou Insomnia para testar sua API, enviando solicitações para as rotas definidas e verificando as respostas.
+
+### Conclusão
+
+Completando esses passos, você terá criado uma API funcional usando PHP e Laravel. Você pode estender e aprimorar essa base de acordo com as necessidades específicas do seu projeto.
+
+---
+
